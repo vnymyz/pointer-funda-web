@@ -1,0 +1,23 @@
+package main
+
+import "fmt"
+
+type UpdateMahasiswa struct {
+	Nama, Kelas, Npm string
+}
+
+func main() {
+	var data1 UpdateMahasiswa = UpdateMahasiswa{"Vanya Mayazura", "4KA21", "16119468"}
+	var data2 *UpdateMahasiswa = &data1
+	var data3 *UpdateMahasiswa = &data1
+
+	data2 = &UpdateMahasiswa{"Muhammad Ibnu", "2KA26", "999999"}
+
+	fmt.Println(data1)
+	fmt.Println(data2)
+	fmt.Println(data3)
+
+	var data4 *UpdateMahasiswa = new(UpdateMahasiswa)
+	data4.Npm = "15118967"
+	fmt.Println(data4)
+}
